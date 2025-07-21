@@ -7,6 +7,23 @@
   "main": "dist/index.umd.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Elcynia/react-lite-scrollbar.git"
+  },
+  "homepage": "https://github.com/Elcynia/react-lite-scrollbar",
+  "bugs": {
+    "url": "https://github.com/Elcynia/react-lite-scrollbar/issues"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "scroll-bar",
+    "progress-bar"
+  ],
+  "author": {
+    "name": "Elcynia"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
