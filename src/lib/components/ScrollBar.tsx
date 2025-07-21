@@ -29,7 +29,7 @@ const scrollStyle = (
     transitionDuration: `${duration}s`,
   } satisfies React.CSSProperties);
 
-export default function ProgressBar({ height, bgColor, duration }: ProgressBarProps) {
+export default function ScrollBar({ height, bgColor, duration }: ProgressBarProps) {
   const [width, setWidth] = useState<string | null>(null);
 
   const handleScroll = useCallback(() => {
