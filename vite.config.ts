@@ -6,9 +6,10 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/lib'),
-      name: 'react-easy-scrollbar',
-      fileName: 'index',
+      entry: path.resolve(__dirname, 'src/lib/index.tsx'),
+      name: 'ReactLiteScrollbar',
+      fileName: (format) => `index.${format === 'es' ? 'js' : 'umd.cjs'}`,
+      formats: ['es', 'umd'],
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -20,5 +21,11 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react(), dts()],
+  plugins: [
+    react(),
+    dts({
+      outDir: 'dist',
+      tsconfigPath: './tsconfig.app.json',
+    }),
+  ],
 });
