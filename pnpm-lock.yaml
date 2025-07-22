@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      dist:
-        specifier: link:dist
-        version: link:dist
       react:
         specifier: ^19.1.0
         version: 19.1.0
