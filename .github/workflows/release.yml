@@ -1,40 +1,24 @@
-name: NPM Publish and Create GitHub Release
+name: Create release
 
 on:
   push:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
-  build-and-publish:
-    runs-on: ubuntu-latest
+  release:
+    name: Release pushed tag
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          registry-url: 'https://registry.npmjs.org/'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Publish to NPM
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.react-lite-scrollbar-token }}
-
-      - name: Create GitHub Release
-        uses: actions/create-release@v1
+      - name: Create release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            최신 버전 릴리즈 완료
-            자세한 변경 사항은 커밋 히스토리를 확인해주세요.
-          draft: false
-          prerelease: false
+          tag: ${{ github.ref_name }}
+        run: |
+          gh release create "$tag" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="${tag#v}" \
+              --generate-notes
