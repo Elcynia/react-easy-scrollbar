@@ -19,7 +19,26 @@
     "react",
     "react-component",
     "scroll-bar",
-    "progress-bar"
+    "scrollbar",
+    "scroll bar",
+    "scrolling",
+    "progress-bar",
+    "scrollbar",
+    "custom-scrollbar",
+    "react-scroll",
+    "react-scrollbar",
+    "lightweight-scrollbar",
+    "light-scrollbar",
+    "simple-scrollbar",
+    "virtual-scrollbar",
+    "scroll-indicator",
+    "scroll-progress",
+    "scroll",
+    "ui",
+    "component",
+    "react-ui",
+    "react-scroll-indicator",
+    "react-scroll-progress"
   ],
   "author": {
     "name": "Elcynia"
