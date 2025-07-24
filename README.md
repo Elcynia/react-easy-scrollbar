@@ -1,4 +1,4 @@
-# react-light-scrollbar
+# React Lite Scrollbar
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 ![npm version](https://img.shields.io/npm/v/react-lite-scrollbar.svg?style=flat)
@@ -8,13 +8,13 @@ A lightweight and customizable scroll progress bar for React.
 ## Installation
 
 ```bash
-npm install react-light-scrollbar
+npm install react-lite-scrollbar
 ```
 
 ## Basic Usage
 
 ```jsx
-import ScrollBar from 'react-light-scrollbar';
+import ScrollBar from 'react-lite-scrollbar';
 
 export default function App() {
   return (
